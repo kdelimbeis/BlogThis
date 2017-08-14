@@ -4,12 +4,8 @@ require 'bundler/setup'
 require 'sinatra/flash'
 
 require './models'
-<<<<<<< HEAD
 require 'pry'
-=======
 
-
->>>>>>> 11075d6b5bbc2112c37856a2e30aabaf4afc70ac
 
 set :database, { adapter: "sqlite3", database: "development.sqlite3" }
 
@@ -59,8 +55,7 @@ get '/logout' do
   redirect '/'
 end
 
-=======
->>>>>>> 11075d6b5bbc2112c37856a2e30aabaf4afc70ac
+
 post '/login' do
 	user = User.find_by(username: params[:username])
 	if user && user.password == params[:password]
