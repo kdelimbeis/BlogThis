@@ -4,7 +4,12 @@ require 'bundler/setup'
 require 'sinatra/flash'
 
 require './models'
+<<<<<<< HEAD
 require 'pry'
+=======
+
+
+>>>>>>> 11075d6b5bbc2112c37856a2e30aabaf4afc70ac
 
 set :database, { adapter: "sqlite3", database: "development.sqlite3" }
 
@@ -23,6 +28,7 @@ get '/signup' do
   erb :signup
 end
 
+<<<<<<< HEAD
 
 post '/signup' do
   user = User.find_by(username: params[:user][:username])
@@ -40,37 +46,21 @@ post '/signup' do
   end
 end
 
+=======
+>>>>>>> 11075d6b5bbc2112c37856a2e30aabaf4afc70ac
 get '/login' do
-  erb :login
+	erb :login
 end
 
-post '/login' do
- user = User.find_by(username: params[:user][:username])
- if user && user.password == params[:user][:password]
-   session[:user_id] = user.id
-   flash[:notice] = "Successfully logged in."
-   redirect "/users/#{user.id}"
- else
-   flash[:alert] = "Failed to log in."
-   redirect '/login'
- end
-end
-
-get '/users/:id' do
-  if current_user && current_user.id == params[:id].to_i
-    erb :show
-  else
-    flash[:alert] = "Sorry, you can't go there."
-    redirect '/'
-  end
-end
-
+<<<<<<< HEAD
 get '/logout' do
   session.clear
   flash[:notice] = "Byeeeeeee"
   redirect '/'
 end
 
+=======
+>>>>>>> 11075d6b5bbc2112c37856a2e30aabaf4afc70ac
 post '/login' do
 	user = User.find_by(username: params[:username])
 	if user && user.password == params[:password]

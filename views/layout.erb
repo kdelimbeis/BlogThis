@@ -15,15 +15,14 @@
     Header starts here. It contains Logo and 3 navigation links.
     ****************************************************************************-->
     <div id="logo"><!-- <img src="logoImage.png" alt="sample logo"> --><!-- Patrice &amp; Kostas  -->Patrice &amp; Kostas</div>
-    <nav> <a href="/" title="Link">Home</a> <a href="/signup" title="Link">Signup</a><a href="/login" title="Link">Login</a> </nav>
+    <nav> <a href="/" title="Link">Home</a> <a href="/signup" title="Link">Signup</a><a href="/signup" title="Link">Login</a> </nav>
   </header>
   <div id="content">
     <div class="notOnDesktop">
       <!-- This search box is displayed only in mobile and tablet laouts and not in desktop layouts -->
-      <input type="text" placeholder="Search">
+      
     </div>
-    <section id="mainContent">
-  </head>
+  </div>
   <body>
     <div class="flash-message">
       <% if flash[:notice] %>
@@ -38,14 +37,7 @@
       <% end %>
     </div>
 
-    <% if current_user %>
-        <a href="/logout">Logout</a>
-      <% else %>
-        <a href="/signup">Signup/Login</a>
-    <% end %>
-
 
     <%= yield %>
-    <p>Current user: <%= current_user ? current_user.username : "no one :(" %> </p>
   </body>
 </html>
