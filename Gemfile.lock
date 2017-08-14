@@ -19,6 +19,10 @@ GEM
     method_source (0.8.2)
     minitest (5.10.3)
     mustermann (1.0.0)
+<<<<<<< HEAD
+    pg (0.21.0)
+=======
+>>>>>>> b80e768f0d95256b256328e40ff89a4fe59a7d93
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -49,6 +53,10 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord
+<<<<<<< HEAD
+  pg
+=======
+>>>>>>> b80e768f0d95256b256328e40ff89a4fe59a7d93
   pry
   rake
   sinatra
