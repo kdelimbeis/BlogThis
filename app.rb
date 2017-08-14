@@ -1,21 +1,10 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> b80e768f0d95256b256328e40ff89a4fe59a7d93
 require 'sinatra'
 require 'sinatra/activerecord'
 require 'bundler/setup'
 require 'sinatra/flash'
-<<<<<<< HEAD
+
 require './models'
 require 'pry'
-=======
-
-require 'pry'
-require './models'
-
-
->>>>>>> b80e768f0d95256b256328e40ff89a4fe59a7d93
 
 set :database, { adapter: "sqlite3", database: "development.sqlite3" }
 
@@ -34,7 +23,7 @@ get '/signup' do
   erb :signup
 end
 
-<<<<<<< HEAD
+
 post '/signup' do
   user = User.find_by(username: params[:user][:username])
   if user
@@ -80,7 +69,7 @@ get '/logout' do
   session.clear
   flash[:notice] = "Byeeeeeee"
   redirect '/'
-=======
+end
 
 post '/login' do
 	user = User.find_by(username: params[:username])
@@ -123,5 +112,4 @@ end
 
 get '/show' do
   erb :show
->>>>>>> b80e768f0d95256b256328e40ff89a4fe59a7d93
 end
